@@ -1,0 +1,34 @@
+15 - Autoboxing and Unboxing in Java
+
+1. What is Autoboxing?
+Autoboxing is the automatic conversion of a primitive value into its corresponding wrapper object.
+Example: int -> Integer
+
+2. What is Unboxing?
+Unboxing is the automatic conversion of a wrapper object back into its primitive type.
+Example: Integer -> int
+
+3. Why is it Useful?
+It helps when working with collections and APIs that require objects instead of primitives.
+
+4. Example Program
+import java.util.ArrayList;
+
+public class AutoBoxingExample {
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList<>();
+
+        numbers.add(10);   // autoboxing
+        numbers.add(20);
+
+        int first = numbers.get(0); // unboxing
+        System.out.println(first);  // 10
+    }
+}
+
+5. Another Example
+Integer num = 50;   // autoboxing
+int x = num;        // unboxing
+
+6. Summary
+Autoboxing and unboxing make Java code cleaner by allowing automatic conversion between primitive types and wrapper classes.
