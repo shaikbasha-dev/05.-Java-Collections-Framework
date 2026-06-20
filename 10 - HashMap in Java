@@ -1,0 +1,56 @@
+10 - HashMap in Java
+
+1. What is HashMap?
+HashMap is a class in Java that implements the Map interface.
+It stores data in key-value pairs and uses hashing for fast access.
+
+2. Why use HashMap?
+HashMap is useful when you need to:
+- store values using a unique key
+- retrieve values quickly
+- update or remove values by key
+
+3. Important Features
+- stores key-value pairs
+- allows one null key and multiple null values
+- does not preserve insertion order
+- does not allow duplicate keys
+
+4. Syntax
+import java.util.HashMap;
+
+HashMap<String, Integer> map = new HashMap<>();
+
+5. Common Methods
+- put(key, value) -> adds or updates a value
+- get(key) -> retrieves the value
+- remove(key) -> removes the key-value pair
+- containsKey(key) -> checks if key exists
+- containsValue(value) -> checks if value exists
+- size() -> returns number of entries
+- clear() -> removes all entries
+
+6. Example Program
+import java.util.HashMap;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        HashMap<String, Integer> marks = new HashMap<>();
+
+        marks.put("Alice", 90);
+        marks.put("Bob", 85);
+        marks.put("Alice", 95); // updates Alice's mark
+
+        System.out.println(marks); // {Alice=95, Bob=85}
+        System.out.println(marks.get("Bob")); // 85
+    }
+}
+
+7. HashMap vs Hashtable
+- HashMap is not synchronized
+- Hashtable is synchronized
+- HashMap allows null values, Hashtable does not
+- HashMap is generally preferred for non-threaded programs
+
+8. Summary
+HashMap is one of the most commonly used collection classes in Java for storing key-value data.
